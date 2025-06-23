@@ -6,8 +6,8 @@
         <nav>
             <a href="#presentacion">Inicio</a>
             <a href="#sobremi">Sobre mí</a>
-            <a href="">Trayectoria</a>
-            <a href="">Proyectos</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
         </nav>
     </header>
 </template>

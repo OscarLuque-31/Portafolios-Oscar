@@ -13,13 +13,15 @@
     <div id="sobremi">
         <h1>Sobre Mí</h1>
         <div class="textsobremi">
-            <p>Programador de software con formación en Desarrollo de Aplicaciones
-                Multiplataforma (DAM) y experiencia práctica en entornos reales durante mis
-                prácticas en Accenture. He utilizado tecnologías como Java, APX, Vue y React, y
-                he trabajado con compañeros de equipo, desarrollando mis habilidades técnicas
-                y de comunicación. Me considero una persona con ganas de aprender, con buena
-                capacidad de adaptación y motivado por crecer profesionalmente en el sector del
-                desarrollo de software.</p>
+            <p>Soy programador de software graduado en Desarrollo de Aplicaciones Multiplataforma (DAM), con
+                experiencia práctica adquirida durante mis prácticas en Accenture.
+
+                Durante este tiempo he trabajado con tecnologías como Java, APX, Vue y React, participando en proyectos
+                reales en equipo, lo que me ha permitido desarrollar tanto mis habilidades técnicas como de
+                comunicación.
+
+                Soy una persona con gran motivación, con muchas ganas de aprender, buena capacidad de adaptación y
+                enfocada en seguir creciendo profesionalmente dentro del sector del desarrollo de software.</p>
             <section class="redes">
                 <div class="redes_cv">
 
@@ -212,7 +214,7 @@
 }
 
 .textsobremi {
-    width: 35vw;
+    width: 40vw;
     border-left: 4px solid rgb(142, 253, 142);
     font-size: 20px;
     line-height: 1.5;
