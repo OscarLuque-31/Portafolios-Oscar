@@ -23,7 +23,7 @@
             <section class="redes">
                 <div class="redes_cv">
 
-                    <a href="../assets/CV_Oscar.pdf" download="CV_OscarLuque.pdf" class="btnCV">
+                    <a href="/CV_Oscar.pdf" download="CV_OscarLuque.pdf" class="btnCV">
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
