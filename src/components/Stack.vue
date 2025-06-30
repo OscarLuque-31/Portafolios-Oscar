@@ -9,6 +9,8 @@ import springLogo from '../assets/spring.png'
 import gitLogo from '../assets/git.png'
 import firebaseLogo from '../assets/firebase.png'
 import jetpackcomposeLogo from '../assets/jetpackcompose.png'
+import javascriptLogo from '../assets/javascript.png'
+import vueLogo from '../assets/vue.png'
 import TarjetaTecnologia from './TarjetaTecnologia.vue';
 
 
@@ -27,11 +29,10 @@ import TarjetaTecnologia from './TarjetaTecnologia.vue';
             <TarjetaTecnologia :imgUrl=htmlLogo backgroundColor="#E83E2E" />
             <TarjetaTecnologia :imgUrl=cssLogo backgroundColor="#1B87C6" />
             <TarjetaTecnologia :imgUrl=jetpackcomposeLogo backgroundColor="#36BE6D" />
-        </div>
-        <div class="tarjetas">
             <TarjetaTecnologia :imgUrl=flutterLogo backgroundColor="#3FC3FE" />
             <TarjetaTecnologia :imgUrl=firebaseLogo backgroundColor="#FE9000" />
-
+            <TarjetaTecnologia :imgUrl=vueLogo backgroundColor="#3EB883" />
+            <TarjetaTecnologia :imgUrl=javascriptLogo backgroundColor="#FFD600" />
         </div>
     </div>
 </template>
@@ -42,16 +43,18 @@ import TarjetaTecnologia from './TarjetaTecnologia.vue';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    min-height: auto;
     color: white;
 }
 
 .tarjetas {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: white;
-    height: 11vh;
+    max-width: 800px;
+    min-height: 13vh;
+    row-gap: 20px;
 }
 </style>

@@ -48,9 +48,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    min-height: auto;
     color: white;
-
 }
 
 .seccionExp {
@@ -92,6 +91,18 @@
 
 .detallesExp ul li {
     margin-bottom: 20px;
-    /* Puedes ajustar el valor a tu gusto */
+}
+
+@media (max-width: 600px) {
+
+    .seccionExp {
+        width: 100%;
+        margin-inline: 20px;
+    }
+
+    #experiencia {
+        margin-inline: 20px;
+    }
+
 }
 </style>

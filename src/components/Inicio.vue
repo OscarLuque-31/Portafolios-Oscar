@@ -11,7 +11,7 @@
         </div>
     </div>
     <div id="sobremi">
-        <h1>Sobre Mí</h1>
+        <h1>Sobre mí</h1>
         <div class="textsobremi">
             <p>Soy programador de software graduado en Desarrollo de Aplicaciones Multiplataforma (DAM), con
                 experiencia práctica adquirida durante mis prácticas en Accenture.
@@ -66,7 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    min-height: auto;
     color: white;
     font-size: large;
     text-align: center;
@@ -77,8 +77,8 @@
 .tarjetaPersonal {
     position: relative;
     display: flex;
-    width: 50vw;
-    height: 60vh;
+    min-width: 50vw;
+    min-height: 60vh;
     z-index: 1;
 }
 
@@ -123,6 +123,7 @@
 .redes {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -136,6 +137,7 @@
 .redes_iconos {
     display: flex;
     gap: 10px;
+    padding-left: 30px;
 }
 
 
@@ -209,12 +211,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    min-height: 40vh;
     color: white;
 }
 
 .textsobremi {
-    width: 40vw;
+    min-width: auto;
+    max-width: 40vw;
     border-left: 4px solid rgb(142, 253, 142);
     font-size: 20px;
     line-height: 1.5;
@@ -222,5 +225,46 @@
 
 .textsobremi p {
     padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .textsobremi {
+        max-width: 100%;
+        padding-inline: 20px;
+        border-left: 0;
+        text-align: justify;
+    }
+
+    .textsobremi p {
+        padding-left: 0;
+    }
+
+    .redes_cv {
+        padding-left: 0;
+    }
+
+    .redes_iconos {
+        padding-left: 0;
+        gap: 0;
+    }
+
+    .aRedes svg {
+        width: 40px;
+        height: 40px;
+        color: rgb(142, 253, 142);
+        transition: all 0.3s ease;
+    }
+
+    .btnCV {
+        width: 135px;
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    .redes {
+        flex-wrap: nowrap;
+    }
+
 }
 </style>

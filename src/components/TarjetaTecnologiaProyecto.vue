@@ -2,6 +2,7 @@
 
 const props = defineProps({
   imgUrl: String,
+  nombre: String,
   backgroundColor: String
 })
 
@@ -13,13 +14,16 @@ function hexToRgba(hex, opacity) {
   return `rgba(${r}, ${g}, ${b}, ${opacity})`
 }
 
+console.log(`${props.imgUrl}`)
+
 const bgColorWithOpacity = hexToRgba(props.backgroundColor, 0.1) // 0.2 = 20% de opacidad
 
 </script>
 
 <template>
-  <div class="tarjeta" :style="{ boxShadow: `0 0 10px 3px ${backgroundColor}`, backgroundColor: bgColorWithOpacity }">
+  <div class="tarjeta" :style="{ boxShadow: `0 0 8px 1px ${backgroundColor}`, backgroundColor: bgColorWithOpacity }">
     <img :src="imgUrl" alt="Imagen de la tarjeta">
+    <h2>{{ nombre }}</h2>
   </div>
 </template>
 
@@ -28,20 +32,23 @@ const bgColorWithOpacity = hexToRgba(props.backgroundColor, 0.1) // 0.2 = 20% de
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
-  padding: 8px;
-  border-radius: 20px;
-  margin-inline: 15px;
+  height: 40px;
+  padding-inline: 15px;
+  border-radius: 15px;
   transition: all 0.3s ease;
+  gap: 15px;
 }
 
 .tarjeta img {
-  height: 35px;
+  height: 20px;
 }
 
-.tarjeta:hover {
-  transform: scale(1.1);
+.tarjeta h2 {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
 }
+
+
 
 </style>
