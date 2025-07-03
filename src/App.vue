@@ -5,7 +5,9 @@ import Experiencia from "./components/Experiencia.vue";
 import Stack from "./components/Stack.vue";
 import Proyectos from "./components/Proyectos.vue";
 import Footer from "./components/Footer.vue";
+import { inject } from "@vercel/analytics"
 
+inject()
 </script>
 
 <template>
