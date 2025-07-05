@@ -60,211 +60,223 @@
 </template>
 
 <style scoped>
-/* Presentacion */
+/* =================================
+   1. ESTILOS BASE (MÓVIL)
+   ================================= */
+
+/* --- Sección Presentación --- */
 #presentacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
-    color: white;
-    font-size: large;
-    text-align: center;
-    padding-inline: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Le damos una altura mínima para que respire */
+  color: white;
+  text-align: center;
+  padding-inline: 20px; /* Padding para móvil */
 }
 
-/*Tarjeta Personal*/
 .tarjetaPersonal {
-    position: relative;
-    display: flex;
-    min-width: 50vw;
-    min-height: 60vh;
-    z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%; /* Ocupa todo el ancho en móvil */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
-/* Glow con pseudoelemento */
+/* El efecto de brillo (Glow) */
 .tarjetaPersonal::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 160%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(142, 253, 142, 0.3) 0%, transparent 60%);
-    z-index: -1;
-    filter: blur(60px);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(142, 253, 142, 0.2) 80%, transparent 70%);
+  z-index: -1;
+  filter: blur(50px);
 }
-
-/*Sección nombre*/
 
 .nombre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .nombre h1 {
-    font-size: 70px;
+  /* Usamos clamp() para un tamaño de fuente fluido y responsive */
+  /* min: 36px, preferido: 10vw, max: 48px */
+  font-size: clamp(40px, 12vw, 56px);
+  line-height: 1.1;
 }
 
 .nombre p {
-    font-size: 50px;
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.2;
 }
 
 .resaltar {
-    color: rgb(142, 253, 142);
-}
-
-/*Sección redes*/
-.redes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.redes_cv {
-    padding-left: 30px;
-}
-
-.redes_iconos {
-    display: flex;
-    gap: 10px;
-    padding-left: 30px;
+  color: rgb(142, 253, 142);
 }
 
 
-.aRedes {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    margin-right: 10px;
-    transition: all 0.3s ease;
-}
-
-.aRedes svg {
-    width: 40px;
-    height: 40px;
-    color: rgb(142, 253, 142);
-    transition: all 0.3s ease;
-}
-
-.aRedes:hover svg {
-    color: rgb(77, 250, 77);
-    transform: scale(1.1);
-}
-
-
-/* Boton CV */
-
-.btnCV {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    width: 190px;
-    border-radius: 10px;
-    font-family: "League Spartan", sans-serif;
-    font-size: 18px;
-    background: rgba(142, 253, 142, 0.15);
-    /* Vidrioso */
-    backdrop-filter: blur(10px);
-    /* Difuminado */
-    -webkit-backdrop-filter: blur(10px);
-    /* Safari */
-    border: 1px solid rgba(142, 253, 142, 0.4);
-    /* Borde suave */
-    color: white;
-    transition: all 0.3s ease;
-    padding: 10px;
-    gap: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btnCV:hover {
-    background: rgba(142, 253, 142, 0.3);
-    transform: scale(1.02);
-}
-
-.btnCV svg {
-    width: 25px;
-    color: rgb(142, 253, 142);
-    flex-shrink: 0;
-    display: block;
-
-}
-
-/*Sección Sobre mí*/
+/* --- Sección Sobre Mí --- */
 #sobremi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 40vh;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-inline: 20px;
 }
 
 .textsobremi {
-    min-width: auto;
-    max-width: 40vw;
-    border-left: 4px solid rgb(142, 253, 142);
-    font-size: 20px;
-    line-height: 1.5;
+  width: 100%;
+  border-left: 0; 
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 .textsobremi p {
-    padding-left: 30px;
+  padding-left: 0;
 }
 
-@media (max-width: 768px) {
+/* --- Sección Redes --- */
+.redes {
+  display: flex;
+  flex-direction: column; /* Apilado vertical por defecto */
+  align-items: center;
+  gap: 20px; 
+  width: 100%;
+  margin-top: 20px;
+}
 
-    .textsobremi {
-        max-width: 100%;
-        padding-inline: 20px;
-        border-left: 0;
-        text-align: justify;
-    }
+.redes_cv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    .textsobremi p {
-        padding-left: 0;
-    }
+.btnCV {
+  /* Estilos del botón CV para móvil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 10px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  background: rgba(142, 253, 142, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(142, 253, 142, 0.4);
+  color: white;
+  transition: all 0.3s ease;
+  padding: 6px;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
-    .redes_cv {
-        padding-left: 0;
-    }
+.btnCV svg {
+  width: 25px;
+  color: rgb(142, 253, 142);
+}
 
-    .redes_iconos {
-        padding-left: 0;
-        gap: 0;
-    }
+.redes_iconos {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px; 
+  width: 100%;
+}
 
-    .aRedes svg {
-        width: 40px;
-        height: 40px;
-        color: rgb(142, 253, 142);
-        transition: all 0.3s ease;
-    }
+.aRedes svg {
+  width: 40px;
+  height: 40px;
+  color: rgb(142, 253, 142);
+  transition: all 0.2s ease;
+}
 
-    .btnCV {
-        width: 135px;
-        font-size: 18px;
-        gap: 8px;
-    }
+.aRedes:hover svg {
+  color: rgb(77, 250, 77);
+  transform: scale(1.1);
+}
 
-    .redes {
-        flex-wrap: nowrap;
-    }
 
+@media (min-width: 768px) {
+  .nombre h1 {
+    font-size: 60px;
+  }
+  .nombre p {
+    font-size: 40px;
+  }
+
+  .textsobremi {
+    max-width: 80%; 
+  }
+
+  .redes {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .redes_cv {
+    width: auto; 
+    justify-content: flex-start;
+  }
+
+  .btnCV {
+    width: 190px;
+  }
+
+  .redes_iconos {
+    width: auto;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  #presentacion {
+    min-height: 70vh;
+  }
+
+  .tarjetaPersonal::before {
+    background: radial-gradient(circle, rgba(142, 253, 142, 0.3) 20%, transparent 60%);
+    filter: blur(60px);
+  }
+
+  .nombre h1 {
+    font-size: 70px; /* El tamaño original de escritorio */
+  }
+  .nombre p {
+    font-size: 50px;
+  }
+
+  .textsobremi {
+    max-width: 45vw; /* El ancho de columna de escritorio */
+    border-left: 4px solid rgb(142, 253, 142); /* Devolvemos el borde */
+    text-align: left; /* Alineamos a la izquierda */
+  }
+
+  .textsobremi p {
+    font-size: 20px;
+    padding-left: 30px; /* Devolvemos el padding interno */
+  }
+
+  .redes {
+    max-width: 45vw; /* Alineamos las redes con el texto de arriba */
+  }
+
+  .btnCV {
+    margin-left: 30px;
+  }
 }
 </style>

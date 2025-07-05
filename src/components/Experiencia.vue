@@ -44,65 +44,85 @@
 
 <style scoped>
 #experiencia {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  color: white;
+  padding-inline: 20px; 
 }
 
 .seccionExp {
-    width: 40vw;
-    color: white;
+  width: 100%; 
+  color: white;
 }
 
 .nombreFecha {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nombreFecha h2 {
-    color: rgb(142, 253, 142);
+  color: rgb(142, 253, 142);
+  font-size: 20px;
+}
+
+.nombreFecha h3 {
+  font-size: 15px;
 }
 
 .detallesExp {
-    background-color: blue;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: "League Spartan", sans-serif;
-    font-size: 18px;
-    background: rgba(142, 253, 142, 0.15);
-    /* Vidrioso */
-    backdrop-filter: blur(10px);
-    /* Difuminado */
-    -webkit-backdrop-filter: blur(10px);
-    /* Safari */
-    border: 1px solid rgba(142, 253, 142, 0.4);
-    /* Borde suave */
-    color: white;
-    transition: all 0.3s ease;
-    padding: 10px;
-    gap: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(142, 253, 142, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(142, 253, 142, 0.4);
+  border-radius: 10px;
+  padding: 15px; 
+  font-family: "League Spartan", sans-serif;
+  font-size: 17px; 
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.detallesExp ul {
+  padding-left: 20px; 
 }
 
 .detallesExp ul li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
 
-    .seccionExp {
-        width: 100%;
-        margin-inline: 20px;
-    }
+@media (min-width: 768px) {
+  #experiencia {
+    padding-inline: 0;
+  }
 
-    #experiencia {
-        margin-inline: 20px;
-    }
+  .seccionExp {
+    width: 80%;
+  }
 
+  .detallesExp {
+    font-size: 18px; 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .seccionExp {
+    width: 45vw;
+  }
+
+  .nombreFecha h2 {
+    font-size: 26px;
+  }
+
+  .nombreFecha h3 {
+    font-size: 20px;
+  }
 }
 </style>

@@ -48,7 +48,4 @@ const bgColorWithOpacity = hexToRgba(props.backgroundColor, 0.1) // 0.2 = 20% de
     font-size: 15px;
     font-weight: 300;
 }
-
-
-
 </style>

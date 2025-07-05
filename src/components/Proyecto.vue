@@ -81,7 +81,7 @@ defineProps({
 
 .tecnologias {
     display: flex;
-    flex-wrap: row;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -99,10 +99,8 @@ h3 {
 }
 
 @media (max-width: 600px) {
-
     .proyecto {
         margin-inline: 20px;
     }
-
 }
 </style>
