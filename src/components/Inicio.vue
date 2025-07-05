@@ -60,32 +60,26 @@
 </template>
 
 <style scoped>
-/* =================================
-   1. ESTILOS BASE (MÓVIL)
-   ================================= */
-
-/* --- Sección Presentación --- */
 #presentacion {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 60vh; /* Le damos una altura mínima para que respire */
+  min-height: 60vh;
   color: white;
   text-align: center;
-  padding-inline: 20px; /* Padding para móvil */
+  padding-inline: 20px; 
 }
 
 .tarjetaPersonal {
   position: relative;
   display: flex;
-  width: 100%; /* Ocupa todo el ancho en móvil */
+  width: 100%; 
   justify-content: center;
   align-items: center;
   z-index: 1;
 }
 
-/* El efecto de brillo (Glow) */
 .tarjetaPersonal::before {
   content: "";
   position: absolute;
@@ -108,8 +102,6 @@
 }
 
 .nombre h1 {
-  /* Usamos clamp() para un tamaño de fuente fluido y responsive */
-  /* min: 36px, preferido: 10vw, max: 48px */
   font-size: clamp(60px, 12vw, 60px);
   line-height: 1.1;
 }
@@ -124,7 +116,6 @@
 }
 
 
-/* --- Sección Sobre Mí --- */
 #sobremi {
   display: flex;
   flex-direction: column;
@@ -147,10 +138,9 @@
   opacity: 0.9;
 }
 
-/* --- Sección Redes --- */
 .redes {
   display: flex;
-  flex-direction: column; /* Apilado vertical por defecto */
+  flex-direction: column; 
   align-items: center;
   gap: 20px; 
   width: 100%;
@@ -164,7 +154,6 @@
 }
 
 .btnCV {
-  /* Estilos del botón CV para móvil */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,25 +243,25 @@
   }
 
   .nombre h1 {
-    font-size: 70px; /* El tamaño original de escritorio */
+    font-size: 70px; 
   }
   .nombre p {
     font-size: 50px;
   }
 
   .textsobremi {
-    max-width: 45vw; /* El ancho de columna de escritorio */
-    border-left: 4px solid rgb(142, 253, 142); /* Devolvemos el borde */
-    text-align: left; /* Alineamos a la izquierda */
+    max-width: 45vw; 
+    border-left: 4px solid rgb(142, 253, 142); 
+    text-align: left;
   }
 
   .textsobremi p {
     font-size: 20px;
-    padding-left: 30px; /* Devolvemos el padding interno */
+    padding-left: 30px; 
   }
 
   .redes {
-    max-width: 45vw; /* Alineamos las redes con el texto de arriba */
+    max-width: 45vw; 
   }
 
   .btnCV {

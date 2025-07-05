@@ -64,7 +64,7 @@
 .nombreFecha {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* AÑADIDO: Espacio pequeño y controlado entre los títulos */
+  gap: 10px; 
   border-left: 3px solid rgb(142, 253, 142);
   margin-block: 10px;
 }
