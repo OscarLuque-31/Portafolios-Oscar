@@ -110,12 +110,12 @@
 .nombre h1 {
   /* Usamos clamp() para un tamaño de fuente fluido y responsive */
   /* min: 36px, preferido: 10vw, max: 48px */
-  font-size: clamp(40px, 12vw, 56px);
+  font-size: clamp(60px, 12vw, 60px);
   line-height: 1.1;
 }
 
 .nombre p {
-  font-size: clamp(28px, 6vw, 40px);
+  font-size: clamp(35px, 6vw, 40px);
   line-height: 1.2;
 }
 
@@ -137,13 +137,14 @@
 .textsobremi {
   width: 100%;
   border-left: 0; 
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: justify;
 }
 
 .textsobremi p {
   padding-left: 0;
+  opacity: 0.9;
 }
 
 /* --- Sección Redes --- */
@@ -171,9 +172,8 @@
   width: 100%;
   border-radius: 10px;
   font-family: "League Spartan", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   background: rgba(142, 253, 142, 0.15);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(142, 253, 142, 0.4);
   color: white;
   transition: all 0.3s ease;

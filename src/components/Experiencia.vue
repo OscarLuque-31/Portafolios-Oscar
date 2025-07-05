@@ -6,7 +6,8 @@
         <h1>Experiencia</h1>
         <section class="seccionExp">
             <div class="nombreFecha">
-                <h2>Accenture - Becario</h2>
+                <h1>Becario</h1>
+                <h2>Accenture</h2>
                 <h3>11/2024 - 06/2025</h3>
             </div>
             <div class="detallesExp">
@@ -21,7 +22,8 @@
         <br>
         <section class="seccionExp">
             <div class="nombreFecha">
-                <h2>Accenture - Dual</h2>
+                <h1>Estudiante en prácticas duales</h1>
+                <h2>Accenture</h2>
                 <h3>03/2024 - 05/2024</h3>
             </div>
             <div class="detallesExp">
@@ -56,33 +58,48 @@
 .seccionExp {
   width: 100%; 
   color: white;
+  margin-bottom: 20px;
 }
 
 .nombreFecha {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px; /* AÑADIDO: Espacio pequeño y controlado entre los títulos */
+  border-left: 3px solid rgb(142, 253, 142);
+  margin-block: 10px;
+}
+
+.nombreFecha h1,
+.nombreFecha h2,
+.nombreFecha h3 {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.nombreFecha h1{
+  color: rgb(142, 253, 142);
 }
 
 .nombreFecha h2 {
-  color: rgb(142, 253, 142);
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .nombreFecha h3 {
   font-size: 15px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  font-weight: 500;
 }
 
 .detallesExp {
   background: rgba(142, 253, 142, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(142, 253, 142, 0.4);
   border-radius: 10px;
   padding: 15px; 
   font-family: "League Spartan", sans-serif;
-  font-size: 17px; 
+  font-size: 20px; 
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -107,7 +124,7 @@
   }
 
   .detallesExp {
-    font-size: 18px; 
+    font-size: 20px; 
   }
 }
 
@@ -118,11 +135,15 @@
   }
 
   .nombreFecha h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .nombreFecha h3 {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  .detallesExp {
+    font-size: 20px; 
   }
 }
 </style>
